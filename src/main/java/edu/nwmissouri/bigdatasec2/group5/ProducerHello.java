@@ -40,7 +40,7 @@ public class ProducerHello {
     for (int i = 1; i <= 5; i++) {
       int ran = ran.nextInt(5);
       String msg = Sentences(ran);
-      ProducerRecord<String, String> rec = new ProducerRecord<String, String>(topicName, message);
+      ProducerRecord<String, String> rec = new ProducerRecord<String, String>(topicName, msg);
       producer.send(rec);
     }
 
@@ -73,7 +73,7 @@ public class ProducerHello {
   else if (i==4){
     return "abcdddddd";
 }
-else if (i==5){
+else (i==5){
   return "abcddddddeeeeeeee";
 }
   }
