@@ -49,7 +49,7 @@ public class Consumer {
             configProperties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.ByteArrayDeserializer");
             configProperties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
             configProperties.put(ConsumerConfig.GROUP_ID_CONFIG, groupId);
-            configProperties.put(ConsumerConfig.CLIENT_ID_CONFIG, "group5");
+            configProperties.put(ConsumerConfig.CLIENT_ID_CONFIG, "simple");
 
             //Figure out where to start processing messages from
             kafkaConsumer = new KafkaConsumer<String, String>(configProperties);
