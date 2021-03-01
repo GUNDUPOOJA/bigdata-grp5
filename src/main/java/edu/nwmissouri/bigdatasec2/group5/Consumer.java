@@ -10,9 +10,6 @@ import java.util.Arrays;
 import java.util.Properties;
 import java.util.Scanner;
 
-/**
- * Created by sunilpatil on 12/28/15.
- */
 public class Consumer {
     private static Scanner in;
 
@@ -52,7 +49,7 @@ public class Consumer {
             configProperties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.ByteArrayDeserializer");
             configProperties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
             configProperties.put(ConsumerConfig.GROUP_ID_CONFIG, groupId);
-            configProperties.put(ConsumerConfig.CLIENT_ID_CONFIG, "simple");
+            configProperties.put(ConsumerConfig.CLIENT_ID_CONFIG, "group5");
 
             //Figure out where to start processing messages from
             kafkaConsumer = new KafkaConsumer<String, String>(configProperties);
