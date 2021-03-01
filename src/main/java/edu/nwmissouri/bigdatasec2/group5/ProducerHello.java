@@ -37,8 +37,9 @@ public class ProducerHello {
 
     // Make our own messages - create your custom logic here
 
-    for (int i = 1; i <= 10; i++) {
-      String message = "hello" + i;
+    for (int i = 1; i <= 5; i++) {
+      int ran = ran.nextInt(5);
+      String msg = Sentences(ran);
       ProducerRecord<String, String> rec = new ProducerRecord<String, String>(topicName, message);
       producer.send(rec);
     }
@@ -54,5 +55,26 @@ public class ProducerHello {
 
     in.close();
     producer.close();
+  }
+  private static String Sentences(int i){
+    if (i==0){ 
+     System.out.println("abcd");
+    }
+    else if (i==1){
+      return "abcdd";
+
+    }
+    else if (i==2){
+      return "abcddd";
+  }
+  else if (i==3){
+    return "abcddddd";
+  }
+  else if (i==4){
+    return "abcdddddd";
+}
+else if (i==5){
+  return "abcddddddeeeeeeee";
+}
   }
 }
